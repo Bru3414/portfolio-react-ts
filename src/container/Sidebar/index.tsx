@@ -3,19 +3,23 @@ import Avatar from '../../components/Avatar';
 import Paragrafo from '../../components/Paragrafo';
 import { Descricao, Botao, SideBar } from './styles';
 
-const Sidebar = () => {
+type Props = {
+  toggleTheme: () => void;
+};
+
+const Sidebar = ({ toggleTheme }: Props) => {
   return (
     <aside>
       <SideBar>
         <Avatar />
-        <Titulo fontSize={20} align="center">
+        <Titulo fontSize={18} align="left">
           Bruno Dambroski
         </Titulo>
         <Paragrafo tipo="secundario" fontSize={16}>
-          Bru3414
+          bru3414
         </Paragrafo>
-        <Descricao fontSize={12}>Developer Front-end</Descricao>
-        <Botao>Trocar tema</Botao>
+        <Descricao fontSize={12}>Front-end Developer</Descricao>
+        <Botao onClick={toggleTheme}>Trocar tema</Botao>
       </SideBar>
     </aside>
   );

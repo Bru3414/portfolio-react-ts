@@ -3,12 +3,10 @@ import styled from 'styled-components';
 const GithubSecao = styled.div`
   margin-top: 32px;
   margin-bottom: 64px;
-  display: flex;
 
   @media (max-width: 767px) {
-    display: block;
-
     img {
+      height: auto;
       width: 100%;
     }
   }
